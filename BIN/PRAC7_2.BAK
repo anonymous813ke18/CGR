@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<graphics.h>
+#include<stdlib.h>
+#include<math.h>
+
+void main()
+{
+int gd=DETECT,gm;
+int i;
+int x2,y2,x1,y1,x,y;
+printf("Enter x,y coordinates of the 2 line end points:");
+printf("x1,y1,x2,y2");
+scanf("%d%d%d%d",&x1,&y1,&x2,&y2);
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+outtextxy(200,20, "20426: Khan Omar");
+printf("Original line before scaling:");
+line (x1,y1,x2,y2);
+printf("\n Enter x and y scaling factors");
+scanf("%d%d",&x,&y);
+x1=(x1*x);
+y1=(y1*y);
+x2=(x2*x);
+y2=(y2*y);
+printf("\n Line after scaling");
+line(x1,y1,x2,y2);
+getch();
+closegraph();
+}
